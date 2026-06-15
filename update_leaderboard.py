@@ -14,7 +14,7 @@ MEMBERS = [
     {"login": "kharozim",      "role": "Android Engineer"},
     {"login": "bowoBp",        "role": "BackEnd Engineer"},
     {"login": "totop275",      "role": "Full Stack Engineer"},
-    {"login": "alimurtadho",   "role": "Sr. Infra Team"},
+    {"login": "alimurtadho",   "role": "Infra & Data Team"},
 ]
 
 MEDALS = ["🥇", "🥈", "🥉", "🏅", "🏅", "🏅", "🏅", "🏅", "🏅", "🏅"]
