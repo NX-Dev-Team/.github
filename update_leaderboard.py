@@ -14,7 +14,7 @@ MEMBERS = [
     {"login": "kharozim",      "role": "Android Engineer"},
     {"login": "bowoBp",        "role": "BackEnd Engineer"},
     {"login": "totop275",      "role": "Full Stack Engineer"},
-    {"login": "alimurtadho",   "role": "Infra & Data Team"},
+    {"login": "alimurtadho",   "role": "Sr. Infra Team"},
 ]
 
 MEDALS = ["🥇", "🥈", "🥉", "🏅", "🏅", "🏅", "🏅", "🏅", "🏅", "🏅"]
@@ -174,13 +174,9 @@ def fetch_stats() -> list[dict]:
 
 # ── Build markdown table ──────────────────────────────────────────────────────
 
-def build_table(stats: list[dict]) -> str:
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+def build_data_block(stats: list[dict]) -> str:
+    """Bagian tabel tanpa timestamp — dipakai untuk cek apakah data berubah."""
     lines = [
-        "<!-- LEADERBOARD-START -->",
-        "",
-        f"_Last updated: {now}_",
-        "",
         "| Rank | Developer | Role | 🟢 PR Kecil | 🟡 PR Sedang | 🔴 PR Besar | 👀 Reviews | 🎯 Issues | ⭐ Score |",
         "| :--: | :-------- | :--- | :---------: | :----------: | :---------: | :--------: | :-------: | :------: |",
     ]
@@ -193,7 +189,17 @@ def build_table(stats: list[dict]) -> str:
             f" | {s['reviews_given']} | {s['issues_closed']}"
             f" | **{s['score']}** |"
         )
-    lines += [
+    return "\n".join(lines)
+
+
+def build_table(stats: list[dict], timestamp: str) -> str:
+    """Tabel lengkap dengan timestamp."""
+    lines = [
+        "<!-- LEADERBOARD-START -->",
+        "",
+        f"_Last updated: {timestamp}_",
+        "",
+        build_data_block(stats),
         "",
         "> **Scoring:** 🟢 PR Kecil (<100 lines) ×1 &nbsp;·&nbsp; 🟡 PR Sedang (100–500 lines) ×3 &nbsp;·&nbsp; 🔴 PR Besar (>500 lines) ×6 &nbsp;·&nbsp; 👀 Review ×2 &nbsp;·&nbsp; 🎯 Issue Closed ×3",
         "",
@@ -204,25 +210,43 @@ def build_table(stats: list[dict]) -> str:
 
 # ── Update README ─────────────────────────────────────────────────────────────
 
-def update_readme(table: str) -> bool:
+def update_readme(stats: list[dict]) -> bool:
     with open(README_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    pattern = r"<!-- LEADERBOARD-START -->.*?<!-- LEADERBOARD-END -->"
-    new_content, n = re.subn(pattern, table, content, flags=re.DOTALL)
+    # Ambil timestamp lama dari README (kalau ada)
+    ts_match = re.search(r"_Last updated: (.+?)_", content)
+    old_timestamp = ts_match.group(1) if ts_match else ""
+
+    # Cek apakah DATA berubah (tanpa timestamp)
+    new_data_block = build_data_block(stats)
+    data_pattern   = r"\| Rank \|.*?(?=\n>|\n\n<!-- LEADERBOARD-END -->)"
+    old_data_match = re.search(data_pattern, content, flags=re.DOTALL)
+    old_data_block = old_data_match.group(0).strip() if old_data_match else ""
+
+    data_changed = new_data_block.strip() != old_data_block.strip()
+
+    if not data_changed:
+        print("[INFO] Data leaderboard tidak berubah — skip commit.")
+        return False
+
+    # Data berubah → update timestamp sekarang
+    from datetime import timedelta
+    WIB = timezone(timedelta(hours=7))
+    new_timestamp = datetime.now(WIB).strftime("%Y-%m-%d %H:%M WIB")
+    new_table     = build_table(stats, new_timestamp)
+
+    pattern     = r"<!-- LEADERBOARD-START -->.*?<!-- LEADERBOARD-END -->"
+    new_content, n = re.subn(pattern, new_table, content, flags=re.DOTALL)
 
     if n == 0:
         print("[ERROR] Sentinel comments not found in README.")
         return False
 
-    if new_content == content:
-        print("[INFO] Leaderboard unchanged — skipping write.")
-        return False
-
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(new_content)
 
-    print(f"[OK] {README_PATH} updated.")
+    print(f"[OK] {README_PATH} updated. Timestamp: {new_timestamp}")
     return True
 
 
@@ -233,8 +257,7 @@ if __name__ == "__main__":
         raise SystemExit("[ERROR] GH_TOKEN env var is not set.")
 
     stats   = fetch_stats()
-    table   = build_table(stats)
-    changed = update_readme(table)
+    changed = update_readme(stats)
 
     with open(os.environ.get("GITHUB_OUTPUT", "/dev/null"), "a") as fh:
         fh.write(f"changed={'true' if changed else 'false'}\n")
