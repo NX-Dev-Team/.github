@@ -48,13 +48,15 @@ _This leaderboard tracks the activity of our core engineers. (Automated via GitH
 
 <!-- LEADERBOARD-START -->
 
-| Rank | Developer                                          | Role                | Commits | PRs |
-| :--: | :------------------------------------------------- | :------------------ | :-----: | :-: |
-|  🥇  | [@muhamadsyafii](https://github.com/muhamadsyafii) | Android Engineer    |    0    |  0  |
-|  🥈  | [@kharozim](https://github.com/kharozim)           | Android Engineer    |    0    |  0  |
-|  🥉  | [@bowoBp](https://github.com/bowoBp)               | BackEnd Engineer    |    0    |  0  |
-|  🏅  | [@totop275](https://github.com/totop275)           | Full Stack Engineer |    0    |  0  |
-|  🏅  | [@alimurtadho](https://github.com/alimurtadho)     | Sr. Infra Team      |    0    |  0  |
+_Last updated: 2026-06-15 10:35 UTC_
+
+| Rank | Developer | Role | Commits | PRs |
+| :--: | :-------- | :--- | :-----: | :-: |
+| 🥇 | [@totop275](https://github.com/totop275) | Full Stack Engineer | 206 | 1 |
+| 🥈 | [@bowoBp](https://github.com/bowoBp) | BackEnd Engineer | 55 | 0 |
+| 🥉 | [@muhamadsyafii](https://github.com/muhamadsyafii) | Android Engineer | 10 | 4 |
+| 🏅 | [@kharozim](https://github.com/kharozim) | Android Engineer | 3 | 3 |
+| 🏅 | [@alimurtadho](https://github.com/alimurtadho) | Infra & Data Team | 0 | 0 |
 
 <!-- LEADERBOARD-END -->
 
