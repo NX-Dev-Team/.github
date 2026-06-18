@@ -48,11 +48,11 @@ _This leaderboard tracks the activity of our core engineers. (Automated via GitH
 
 <!-- LEADERBOARD-START -->
 
-_Last updated: 2026-06-17 11:20 WIB_
+_Last updated: 2026-06-18 11:12 WIB_
 
 | Rank | Developer | Role | 🟢 PR Kecil | 🟡 PR Sedang | 🔴 PR Besar | 👀 Reviews | 🎯 Issues | ⭐ Score |
 | :--: | :-------- | :--- | :---------: | :----------: | :---------: | :--------: | :-------: | :------: |
-| 🥇 | [@muhamadsyafii](https://github.com/muhamadsyafii) | Android Engineer | 5 | 0 | 0 | 0 | 0 | **5** |
+| 🥇 | [@muhamadsyafii](https://github.com/muhamadsyafii) | Android Engineer | 6 | 0 | 0 | 0 | 0 | **6** |
 | 🥈 | [@kharozim](https://github.com/kharozim) | Android Engineer | 4 | 0 | 0 | 0 | 0 | **4** |
 | 🥉 | [@totop275](https://github.com/totop275) | Full Stack Engineer | 1 | 0 | 0 | 0 | 0 | **1** |
 | 🏅 | [@bowoBp](https://github.com/bowoBp) | BackEnd Engineer | 0 | 0 | 0 | 0 | 0 | **0** |
