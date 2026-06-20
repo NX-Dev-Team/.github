@@ -56,7 +56,7 @@ _Last updated: 2026-06-19 11:41 WIB_
 | 🥈 | [@kharozim](https://github.com/kharozim) | Android Engineer | 5 | 0 | 0 | 0 | 0 | **5** |
 | 🥉 | [@totop275](https://github.com/totop275) | Full Stack Engineer | 1 | 0 | 0 | 0 | 0 | **1** |
 | 🏅 | [@bowoBp](https://github.com/bowoBp) | BackEnd Engineer | 0 | 0 | 0 | 0 | 0 | **0** |
-| 🏅 | [@alimurtadho](https://github.com/alimurtadho) | Infra & Data Team | 0 | 0 | 0 | 0 | 0 | **0** |
+| 🏅 | [@alimurtadho](https://github.com/alimurtadho) | Analyst Engineer | 0 | 0 | 0 | 0 | 0 | **0** |
 
 > **Scoring:** 🟢 PR Kecil (<100 lines) ×1 &nbsp;·&nbsp; 🟡 PR Sedang (100–500 lines) ×3 &nbsp;·&nbsp; 🔴 PR Besar (>500 lines) ×6 &nbsp;·&nbsp; 👀 Review ×2 &nbsp;·&nbsp; 🎯 Issue Closed ×3
 
