@@ -4,32 +4,34 @@ Building scalable systems, robust mobile applications, and seamless digital expe
 
 ## 👨‍💻 About Us
 
-**NX-Dev-Team** is a dedicated engineering hub focused on crafting high-quality software solutions. We embrace clean architecture, efficient system design, and modern development practices. From high-performance backend middlewares to native Android applications and comprehensive web platforms, we build tools that empower users and streamline workflows.
+**NX-Dev-Team** is a dedicated engineering hub focused on crafting high-quality software solutions. We embrace clean architecture, efficient system design, and modern development practices.
+
+From high-performance backend middlewares to native Android applications and comprehensive web platforms, we build tools that empower users, streamline workflows, and support reliable digital operations.
 
 ## 🌟 Core Focus Areas
 
-📱 **Native Mobile Development**
-Building responsive, modern, and highly modular Android applications utilizing Kotlin, Jetpack Compose, and robust architectural patterns like Clean Architecture and Multi-Module structures.
+📱 **Native Mobile Development**  
+Building responsive, modern, and highly modular Android applications using Kotlin, Jetpack Compose, and robust architectural patterns such as Clean Architecture and Multi-Module structures.
 
-⚙️ **Backend & API Systems**
-Designing scalable server-side solutions, secure middlewares, and efficient RESTful APIs. We prioritize high performance and secure data handling for platforms like our CMS and cloud services.
+⚙️ **Backend & API Systems**  
+Designing scalable server-side solutions, secure middlewares, and efficient RESTful APIs. We prioritize performance, maintainability, and secure data handling for our CMS, cloud services, and internal platforms.
 
-🛠️ **System Architecture & Automation**
-Engineering reliable internal tools, automated testing generators, and distribution portals. We leverage containerization and terminal-based workflows to ensure smooth deployments and resilient infrastructure.
+🛠️ **System Architecture & Automation**  
+Engineering reliable internal tools, automated workflows, testing utilities, and deployment processes. We leverage containerization, terminal-based workflows, and automation to improve team productivity and operational consistency.
 
 ## 💻 Our Tech Stack
 
-| Category            | Technologies                                  |
-| :------------------ | :-------------------------------------------- |
-| **Mobile**          | Kotlin, Java, Jetpack Compose, Android SDK    |
-| **Backend & Web**   | Go, PHP, REST API Architecture                |
-| **Database & Data** | PostgreSQL, MySQL                             |
-| **DevOps & Infra**  | Linux (Ubuntu), Docker, Shell Scripting, Git  |
-| **Architecture**    | Clean Architecture, Modularization, Monorepos |
+| Category | Technologies |
+| :-- | :-- |
+| **Mobile** | Kotlin, Java, Jetpack Compose, Android SDK |
+| **Backend & Web** | Go, PHP, REST API Architecture |
+| **Database & Data** | PostgreSQL, MySQL |
+| **DevOps & Infra** | Linux Ubuntu, Docker, Shell Scripting, Git |
+| **Architecture** | Clean Architecture, Modularization, Monorepos |
 
 ## 📂 Organization Structure
 
-To keep our collaborative workspace highly organized, we adhere to strict repository naming conventions:
+To keep our collaborative workspace highly organized, we follow clear repository naming conventions:
 
 - `be-[name]` — Backend services and APIs
 - `fe-[name]` — Frontend web applications and portals
@@ -40,28 +42,15 @@ To keep our collaborative workspace highly organized, we adhere to strict reposi
 
 ## 📈 Team Activity & Contribution
 
-We value transparency and recognize every contribution made by our engineers. Below is the live activity overview of our team.
+We value transparency, consistency, and meaningful engineering contributions.
 
-### 📊 Contribution Leaderboard
+Our internal contribution leaderboard is now delivered automatically through **NX SmartBot Assist** using a full **n8n-based automation workflow**. The leaderboard summarizes team activity such as pull requests, reviews, issues, and contribution scores, then sends the latest report directly to our Telegram group.
 
-_This leaderboard tracks the activity of our core engineers. (Automated via GitHub Actions)_
+### 🏆 Contribution Leaderboard
 
-<!-- LEADERBOARD-START -->
+The public README no longer stores a live leaderboard table to avoid outdated contribution snapshots.
 
-_Last updated: 2026-06-29 11:09 WIB_
+Current leaderboard updates are delivered through:
 
-| Rank | Developer | Role | 🟢 PR Kecil | 🟡 PR Sedang | 🔴 PR Besar | 👀 Reviews | 🎯 Issues | ⭐ Score |
-| :--: | :-------- | :--- | :---------: | :----------: | :---------: | :--------: | :-------: | :------: |
-| 🥇 | [@muhamadsyafii](https://github.com/muhamadsyafii) | Android Engineer | 8 | 0 | 0 | 0 | 0 | **8** |
-| 🥈 | [@kharozim](https://github.com/kharozim) | Android Engineer | 6 | 0 | 0 | 0 | 0 | **6** |
-| 🥉 | [@totop275](https://github.com/totop275) | Full Stack Engineer | 1 | 0 | 0 | 0 | 0 | **1** |
-| 🏅 | [@bowoBp](https://github.com/bowoBp) | BackEnd Engineer | 0 | 0 | 0 | 0 | 0 | **0** |
-| 🏅 | [@alimurtadho](https://github.com/alimurtadho) | Infra & Data Team | 0 | 0 | 0 | 0 | 0 | **0** |
-
-> **Scoring:** 🟢 PR Kecil (<100 lines) ×1 &nbsp;·&nbsp; 🟡 PR Sedang (100–500 lines) ×3 &nbsp;·&nbsp; 🔴 PR Besar (>500 lines) ×6 &nbsp;·&nbsp; 👀 Review ×2 &nbsp;·&nbsp; 🎯 Issue Closed ×3
-
-<!-- LEADERBOARD-END -->
-
----
-
-_Let's build something amazing together._
+```text
+GitHub Webhook → n8n Automation → NX SmartBot Assist → Telegram
